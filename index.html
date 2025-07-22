@@ -4,81 +4,80 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>SamGon24</title>
- 
   <link rel="stylesheet" href="style.css" />
   <link rel="icon" href="./IMAGES/sam_logo.png" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
   <header>
     <h1>SamGon24</h1>
     <img src="IMAGES/sam_logo.png" alt="Samuel's Logo" class="logo" />
-    <p>Software Developer | C++ | Python | AI | Web Dev & Desing </p>
+    <p>Software Developer | C++ | Python | AI | Web Dev & Design</p>
   </header>
 
   <nav>
     <a href="#about">About</a>
-    <a href="#skills">Skills</a>
     <a href="#projects">Projects</a>
-    <a href="#Trivia_Game">Trivia Game</a>
     <a href="#contact">Contact</a>
   </nav>
 
   <section id="about">
     <h2>About Me</h2>
     <div class="about-container">
-        <p>Software Developer based in San Marcos, Texas.
-          Passionate about messing with my PC, videogames consoles, RC toys or anything that has a circuit board since I have memory.
-          These days I focus more on building meaningful projects on C++, Python, and AI technologies, trying to apply the things I like the most using the freedom and creativity that programming offers me.
-          Currently pursuing a degree in Computer Science at Texas State University, where I am honing my skills in software engineering and data analysis.</p>
-          <img src="IMAGES/IMG_5211.JPEG" alt="Photo of Samuel" class="about-photo" />
-          <div class="about-text">
-      </div>
+      <p>
+        Software Developer based in San Marcos, Texas.<br><br>
+        Passionate about messing with my PC, videogame consoles, RC toys or anything that has a circuit board since I have memory.<br><br>
+        These days I focus more on building meaningful projects on C++, Python, and AI technologies, trying to apply the things I like the most using the freedom and creativity that programming offers me.<br><br>
+        Currently pursuing a degree in Computer Science at Texas State University, where I am honing my skills in software engineering and data analysis.
+      </p>
+      <img src="IMAGES/IMG_5211.JPEG" alt="Photo of Samuel" class="about-photo" />
     </div>
-  </section>
-    
   </section>
 
   <section id="projects">
     <h2>Projects</h2>
+
     <div class="project">
       <h3>ML-Ball</h3>
       <div class="project-container">
         <img src="IMAGES/MLB_PROJECT.png" alt="ML-Ball Project Screenshot" class="project-photo" />
         <div class="project-text">
-          <p>Inspired by my love for the sport and the movie "Moneyball" I built a machine learning model to predict MLB player performance for the 2024 season, using data from 2015 to 2025 pulled from baseball-reference.com. The project was coded in Python and made heavy use of pandas for data handling, NumPy for number crunching, and scikit-learn to train and evaluate the model.
-
-            To make it more interactive, I created a Flask web app where users can type in a player’s name and instantly see the model's prediction based on the input. It turned into a fun and practical way to show off what the model can do.
-            
-            I had the chance to present the project at the TXST AI Symposium 2025, where it was one of the few student projects featured. Got some great feedback from professors and people in the industry, and it was cool to see how much interest there was in using AI for sports.
-            
-            </p>
+          <p>
+            Inspired by my love for the sport and the movie "Moneyball" I built a machine learning model to predict MLB player performance for the 2024 season, using data from 2015 to 2025 pulled from baseball-reference.com.<br><br>
+            The project was coded in Python and made heavy use of pandas for data handling, NumPy for number crunching, and scikit-learn to train and evaluate the model.<br><br>
+            I created a Flask web app where users can type in a player’s name and instantly see the model's prediction.<br><br>
+            I presented the project at the TXST AI Symposium 2025, receiving great feedback from professors and industry professionals.
+          </p>
           <a href="https://web-production-1a459.up.railway.app/" target="_blank" class="project-link">View Demo</a>
         </div>
       </div>
     </div>
-    <!-- Other projects remain unchanged -->
+
     <div class="project">
-      <h3>AI Study Guide Quizzer</h3>
-      <p>A Python tool that reads a study guide and turns it into an interactive quiz to help students prepare better.</p>
+      <h3>Spotify Stats Visualizer</h3>
+      <p>A Python tool that visualizes your Spotify listening trends using Plotly + Flask. Coming soon as a sleek web dashboard.</p>
     </div>
+
     <div class="project">
       <h3>WAR Metric for Soccer</h3>
-      <p>A C++-based analytical model adapting the baseball WAR stat to evaluate player value in La Liga.</p>
+      <p>A C++-based analytical model adapting the baseball WAR stat to evaluate player value in La Liga. It introduces a unified performance index based on context-aware contributions.</p>
     </div>
   </section>
 
   <section id="contact">
     <h2>Contact</h2>
-    <p>Email: samuel.engineer@example.com</p>
-    <p>GitHub: <a href="https://github.com/samueldev" target="_blank">github.com/samueldev</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/samueldev" target="_blank">linkedin.com/in/samueldev</a></p>
+    <p>Email: samuelitro24@gmail.com</p>
+    <p>GitHub: <a href="https://github.com/SamGon24" target="_blank">github.com/SamGon24</a></p>
+    <p>LinkedIn: <a href="https://linkedin.com/in/samgonpin" target="_blank">linkedin.com/in/samgonpin</a></p>
   </section>
 
   <footer>
     <p>© 2025 Samuel González Pineda</p>
   </footer>
 
+  <button id="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">↑</button>
   <script src="script.js"></script>
 </body>
 </html>
+

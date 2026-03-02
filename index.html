@@ -2,31 +2,49 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Samuel Gonzalez - Computer Science student portfolio showcasing projects and experience." />
+
   <title>SamGon24</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="./IMAGES/sam_logo.png" type="image/x-icon" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
+  <a href="#main-content" class="skip-link">Skip to content</a>
   <header>
-    <h1>SamGon24</h1>
-    <img src="IMAGES/sam_logo.png" alt="Samuel's Logo" class="logo" />
-    <p>Software Developer | C++ | Python | AI | Web Dev & Design</p>
+    <div class="container header-content">
+      <h1>Samuel Gonzalez Pineda</h1>
+      <p class="tagline">Computer Science Student | Developer</p>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li>
+            <a href="https://github.com/samugon24"
+               target="_blank"
+               rel="noopener noreferrer">
+              GitHub
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.linkedin.com/in/samuelgoncalves/"
+               target="_blank"
+               rel="noopener noreferrer">
+              LinkedIn
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
   </header>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <main id="main-content">
 
-  <section id="about">
-    <h2>About Me</h2>
-    <div class="about-container">
+
+    <section id="about" class="container section">
+      <h2>About Me</h2>
       <p>
-        Software Developer based in Austin, Texas.<br><br>
+
         Passionate about messing with my PC, videogame consoles, RC toys or anything that has a circuit board since I have memory.<br><br>
         These days I focus more on building meaningful projects on C++, Python, and AI technologies, trying to apply the things I like the most using the freedom and creativity that programming offers me.<br><br>
         Currently pursuing a degree in Computer Science at Texas State University, where I am honing my skills in software engineering and data analysis.
@@ -54,31 +72,54 @@
       </div>
     </div>
 
-    <div class="project">
-      <h3>Spotify Stats Visualizer</h3>
-      <p>This project is a full-stack web application that connects to the Spotify Web API to transform user listening activity into dynamic, interactive visualizations. Through a Flask backend, listening data (top tracks, artists, and genres) is processed and served as structured JSON to the frontend. On the client side, I designed modular and reusable components —such as TopTracksList, TopArtistsList, and GenrePieChart— to ensure clarity, scalability, and maintainability. Using Plotly.js, I implemented interactive charts that provide an immersive experience, allowing users to explore their listening habits from different perspectives. Its deployment is still to be determined but you can find the repo clicking the button below.</p>
       </p>
-  <a href="https://github.com/SamGon24/spotify-visualizer" 
-     target="_blank" 
-     class="project-link">
-     View Repository
-  </a>
-    </div>
-  </section>
+    </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: samuelitro24@gmail.com</p>
-    <p>GitHub: <a href="https://github.com/SamGon24" target="_blank">github.com/SamGon24</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/samgonpin" target="_blank">linkedin.com/in/samgonpin</a></p>
-  </section>
+    <section id="projects" class="container section">
+      <h2>Projects</h2>
+
+      <div class="project">
+        <h3>AI Study Tool</h3>
+        <p>
+          Web application that transforms study notes into interactive quizzes
+          using AI. Built with React and Flask.
+        </p>
+
+        <a href="https://github.com/your-repo-link"
+           target="_blank"
+           rel="noopener noreferrer">
+          View Repository
+        </a>
+      </div>
+
+      <div class="project">
+        <h3>Spotify Stats Visualizer</h3>
+
+        <p>
+          Web app that uses the Spotify API to display personalized listening
+          statistics and visual insights.
+        </p>
+
+        <a href="https://github.com/your-repo-link"
+           target="_blank"
+           rel="noopener noreferrer">
+          View Repository
+        </a>
+      </div>
+
+    </section>
+
+  </main>
 
   <footer>
-    <p>© 2025 Samuel González Pineda</p>
+    <div class="container">
+      <p>© 2026 Samuel Gonzalez Pineda. All rights reserved.</p>
+      <button id="back-to-top">
+        Back to Top
+      </button>
   </footer>
 
-  <button id="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">↑</button>
   <script src="script.js"></script>
+
 </body>
 </html>
-

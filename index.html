@@ -2,83 +2,243 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SamGon24</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Samuel Gonzalez — CS student, developer, builder." />
+  <title>Samuel Gonzalez</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="./IMAGES/sam_logo.png" type="image/x-icon" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
 </head>
-
 <body>
+
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <!-- Noise overlay -->
+  <div class="noise" aria-hidden="true"></div>
+
+  <!-- HEADER / NAV -->
   <header>
-    <h1>SamGon24</h1>
-    <img src="IMAGES/sam_logo.png" alt="Samuel's Logo" class="logo" />
-    <p>Software Developer | C++ | Python | AI | Web Dev & Design</p>
+    <div class="container header-inner">
+      <a href="#" class="wordmark" aria-label="Samuel Gonzalez home">SG<span class="dot">.</span></a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#skills">Skills</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li>
+            <a href="https://github.com/SamGon24" target="_blank" rel="noopener noreferrer" class="nav-external">
+              GitHub ↗
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
   </header>
 
-  <nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
+  <main id="main-content">
 
-  <section id="about">
-    <h2>About Me</h2>
-    <div class="about-container">
-      <p>
-        Software Developer based in Austin, Texas.<br><br>
-        Passionate about messing with my PC, videogame consoles, RC toys or anything that has a circuit board since I have memory.<br><br>
-        These days I focus more on building meaningful projects on C++, Python, and AI technologies, trying to apply the things I like the most using the freedom and creativity that programming offers me.<br><br>
-        Currently pursuing a degree in Computer Science at Texas State University, where I am honing my skills in software engineering and data analysis.
-      </p>
-      <img src="IMAGES/IMG_5211.JPEG" alt="Photo of Samuel" class="about-photo" />
-    </div>
-  </section>
-
-  <section id="projects">
-    <h2>Projects</h2>
-
-    <div class="project">
-      <h3>ML-Ball</h3>
-      <div class="project-container">
-        <img src="IMAGES/MLB_PROJECT.png" alt="ML-Ball Project Screenshot" class="project-photo" />
-        <div class="project-text">
-          <p>
-            Inspired by my love for the sport and the movie "Moneyball" I built a machine learning model to predict MLB player performance for the 2024 season, using data from 2015 to 2025 pulled from baseball-reference.com.<br><br>
-            The project was coded in Python and made heavy use of pandas for data handling, NumPy for number crunching, and scikit-learn to train and evaluate the model.<br><br>
-            I created a Flask web app where users can type in a player’s name and instantly see the model's prediction.<br><br>
-            I presented the project at the TXST AI Symposium 2025, receiving great feedback from professors and industry professionals.
-          </p>
-          <a href="https://web-production-1a459.up.railway.app/" target="_blank" class="project-link">View Demo</a>
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-name">
+      <div class="container hero-inner">
+        <div class="hero-label reveal">CS Student & Developer</div>
+        <h1 id="hero-name" class="hero-name reveal reveal-delay-1">
+          Samuel<br />Gonzalez<span class="accent-dot">.</span>
+        </h1>
+        <p class="hero-sub reveal reveal-delay-2">
+          Building with C++, Python &amp; AI — turning curiosity into code.
+        </p>
+        <div class="hero-cta reveal reveal-delay-3">
+          <a href="#projects" class="btn btn-primary">View my work</a>
+          <a href="https://www.linkedin.com/in/samuelgoncalves/" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">LinkedIn ↗</a>
         </div>
       </div>
-    </div>
+      <div class="hero-deco" aria-hidden="true">
+        <div class="deco-ring deco-ring-1"></div>
+        <div class="deco-ring deco-ring-2"></div>
+        <div class="deco-ring deco-ring-3"></div>
+      </div>
+    </section>
 
-    <div class="project">
-      <h3>Spotify Stats Visualizer</h3>
-      <p>This project is a full-stack web application that connects to the Spotify Web API to transform user listening activity into dynamic, interactive visualizations. Through a Flask backend, listening data (top tracks, artists, and genres) is processed and served as structured JSON to the frontend. On the client side, I designed modular and reusable components —such as TopTracksList, TopArtistsList, and GenrePieChart— to ensure clarity, scalability, and maintainability. Using Plotly.js, I implemented interactive charts that provide an immersive experience, allowing users to explore their listening habits from different perspectives. Its deployment is still to be determined but you can find the repo clicking the button below.</p>
-      </p>
-  <a href="https://github.com/SamGon24/spotify-visualizer" 
-     target="_blank" 
-     class="project-link">
-     View Repository
-  </a>
-    </div>
-  </section>
+    <!-- ABOUT -->
+    <section id="about" class="section" aria-labelledby="about-heading">
+      <div class="container about-grid">
+        <div class="about-img-wrap reveal">
+          <img src="IMAGES/IMG_5211.JPEG" alt="Photo of Samuel Gonzalez" class="about-photo" />
+          <div class="about-img-accent" aria-hidden="true"></div>
+        </div>
+        <div class="about-text reveal reveal-delay-1">
+          <div class="section-label">About me</div>
+          <h2 id="about-heading">I've been taking things apart since I can remember.</h2>
+          <p>
+            PCs, videogame consoles, RC toys — if it had a circuit board, I wanted to know how it worked.
+            These days, I focus that same curiosity into software: building meaningful projects in C++, Python, and AI,
+            applying what I love most through the freedom programming gives me.
+          </p>
+          <p>
+            Currently pursuing a <strong>Computer Science degree at Texas State University</strong>,
+            honing my skills in software engineering and data analysis.
+          </p>
+          <a href="https://github.com/SamGon24" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+            See my GitHub ↗
+          </a>
+        </div>
+      </div>
+    </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: samuelitro24@gmail.com</p>
-    <p>GitHub: <a href="https://github.com/SamGon24" target="_blank">github.com/SamGon24</a></p>
-    <p>LinkedIn: <a href="https://linkedin.com/in/samgonpin" target="_blank">linkedin.com/in/samgonpin</a></p>
-  </section>
+    <!-- SKILLS -->
+    <section id="skills" class="section section-alt" aria-labelledby="skills-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-label">What I work with</div>
+          <h2 id="skills-heading">Skills & Tools</h2>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-group reveal">
+            <h3 class="skill-group-title">Languages</h3>
+            <ul class="skill-list">
+              <li>C++</li>
+              <li>Python</li>
+              <li>JavaScript</li>
+              <li>MIPS Assembly</li>
+              <li>HTML / CSS</li>
+              <li>SQL</li>
+            </ul>
+          </div>
+          <div class="skill-group reveal reveal-delay-1">
+            <h3 class="skill-group-title">Frameworks & Libraries</h3>
+            <ul class="skill-list">
+              <li>React</li>
+              <li>Flask</li>
+              <li>pandas</li>
+              <li>scikit-learn</li>
+              <li>NumPy</li>
+              <li>Matplotlib</li>
+            </ul>
+          </div>
+          <div class="skill-group reveal reveal-delay-2">
+            <h3 class="skill-group-title">Tools & Platforms</h3>
+            <ul class="skill-list">
+              <li>Git & GitHub</li>
+              <li>VS Code</li>
+              <li>MARS (MIPS)</li>
+              <li>Google Maps API</li>
+              <li>Spotify API</li>
+              <li>Firebase / Firestore</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section" aria-labelledby="projects-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-label">What I've built</div>
+          <h2 id="projects-heading">Projects</h2>
+        </div>
+
+        <!-- ML-Ball (featured) -->
+        <div class="project project-featured reveal">
+          <div class="project-img-wrap">
+            <img src="IMAGES/MLB_PROJECT.png" alt="ML-Ball Project Screenshot" class="project-img" />
+            <div class="project-img-overlay" aria-hidden="true"></div>
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="project-tag">Machine Learning</span>
+              <span class="project-tag">Python</span>
+              <span class="project-tag">Web App</span>
+            </div>
+            <h3 class="project-title">ML-Ball</h3>
+            <p class="project-desc">
+              Inspired by my love of the sport and <em>Moneyball</em>, I built a machine learning model
+              to predict MLB player performance for the 2024 season using historical data from
+              baseball-reference.com.
+            </p>
+            <div class="project-links">
+              <a href="https://web-production-1a459.up.railway.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                Live Demo ↗
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Other projects grid -->
+        <div class="projects-grid">
+
+          <!-- AI Study Tool -->
+          <div class="project-card reveal reveal-delay-1">
+            <div class="project-card-icon" aria-hidden="true">🧠</div>
+            <div class="project-meta">
+              <span class="project-tag">React</span>
+              <span class="project-tag">Flask</span>
+              <span class="project-tag">AI</span>
+            </div>
+            <h3 class="project-title">AI Study Tool</h3>
+            <p class="project-desc">
+              Web application that transforms study notes into interactive quizzes using AI.
+              Built with React and Flask.
+            </p>
+            <a href="https://github.com/your-repo-link" target="_blank" rel="noopener noreferrer" class="card-link">
+              View Repository ↗
+            </a>
+          </div>
+
+          <!-- Spotify Stats Visualizer -->
+          <div class="project-card reveal reveal-delay-2">
+            <div class="project-card-icon" aria-hidden="true">🎵</div>
+            <div class="project-meta">
+              <span class="project-tag">Spotify API</span>
+              <span class="project-tag">JavaScript</span>
+            </div>
+            <h3 class="project-title">Spotify Stats Visualizer</h3>
+            <p class="project-desc">
+              Web app that uses the Spotify API to display personalized listening statistics
+              and visual insights.
+            </p>
+            <a href="https://github.com/your-repo-link" target="_blank" rel="noopener noreferrer" class="card-link">
+              View Repository ↗
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section section-contact" aria-labelledby="contact-heading">
+      <div class="container contact-inner reveal">
+        <div class="section-label">Get in touch</div>
+        <h2 id="contact-heading">Let's work together.</h2>
+        <p>
+          Whether you're looking for a collaborator, have a project idea, or just want to connect —
+          my inbox is open.
+        </p>
+        <div class="contact-links">
+          <a href="mailto:samuel@example.com" class="btn btn-primary">Send an email</a>
+          <a href="https://www.linkedin.com/in/samuelgoncalves/" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">LinkedIn ↗</a>
+          <a href="https://github.com/SamGon24" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">GitHub ↗</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
 
   <footer>
-    <p>© 2025 Samuel González Pineda</p>
+    <div class="container footer-inner">
+      <span class="footer-wordmark">SG<span class="dot">.</span></span>
+      <p>© 2026 Samuel Gonzalez Pineda. All rights reserved.</p>
+    </div>
   </footer>
 
-  <button id="back-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">↑</button>
+  <button id="back-to-top" aria-label="Back to top">↑</button>
+
   <script src="script.js"></script>
 </body>
 </html>
-

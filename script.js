@@ -26,7 +26,7 @@ window.addEventListener("scroll", () => {
   } else {
     backToTop.style.display = "none";
   }
-});
+}, { passive: true });
 
 backToTop.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
@@ -102,3 +102,21 @@ window.addEventListener("scroll", () => {
     header.style.boxShadow = "none";
   }
 }, { passive: true });
+
+/* =============================================
+   ACTIVE NAV — highlight current section
+   ============================================= */
+const sections = document.querySelectorAll("section[id]");
+const navAnchors = document.querySelectorAll("nav a[href^='#']");
+
+const sectionObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navAnchors.forEach(a => a.removeAttribute("aria-current"));
+      const active = document.querySelector(`nav a[href="#${entry.target.id}"]`);
+      if (active) active.setAttribute("aria-current", "page");
+    }
+  });
+}, { threshold: 0.4 });
+
+sections.forEach(s => sectionObserver.observe(s));

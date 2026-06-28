@@ -6,7 +6,7 @@
   --surface: #161616;
   --border: #222;
   --text: #e8e8e8;
-  --muted: #555;
+  --muted: #888;
   --accent: #2dd4bf;
   --maxw: 1040px;
   --transition: 0.2s ease;
@@ -138,6 +138,7 @@ nav a {
 }
 nav a:hover { color: var(--accent); }
 .nav-external { color: var(--accent) !important; }
+nav a[aria-current="page"] { color: var(--accent); }
 
 .nav-toggle {
   display: none;
@@ -310,7 +311,10 @@ a:focus-visible, button:focus-visible {
   grid-template-columns: 1.1fr 1fr;
   height: 380px;
   border: 1px solid var(--border);
-  margin-bottom: -1px;
+}
+
+.project-featured:not(:last-child) {
+  border-bottom: none;
 }
 
 .project-img-wrap {

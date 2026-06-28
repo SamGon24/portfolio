@@ -7,6 +7,7 @@
   --border: #222;
   --text: #e8e8e8;
   --muted: #555;
+  --accent: #2dd4bf;
   --maxw: 1040px;
   --transition: 0.2s ease;
 }
@@ -72,7 +73,7 @@ em { font-style: italic; color: inherit; }
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--accent);
   margin-bottom: 12px;
 }
 
@@ -120,8 +121,8 @@ header {
   text-decoration: none;
   transition: opacity var(--transition);
 }
-.wordmark:hover { opacity: 0.6; }
-.dot { color: var(--text); }
+.wordmark:hover { color: var(--accent); opacity: 1; }
+.dot { color: var(--accent); }
 
 .nav-links {
   display: flex;
@@ -135,7 +136,8 @@ nav a {
   font-size: 0.875rem;
   transition: color var(--transition);
 }
-nav a:hover, .nav-external { color: var(--text) !important; }
+nav a:hover { color: var(--accent); }
+.nav-external { color: var(--accent) !important; }
 
 .nav-toggle {
   display: none;
@@ -158,7 +160,7 @@ nav a:hover, .nav-external { color: var(--text) !important; }
    FOCUS
    ============================================= */
 a:focus-visible, button:focus-visible {
-  outline: 1px solid var(--text);
+  outline: 1px solid var(--accent);
   outline-offset: 3px;
 }
 
@@ -181,11 +183,11 @@ a:focus-visible, button:focus-visible {
 }
 
 .btn-primary {
-  background: var(--text);
+  background: var(--accent);
   color: var(--bg);
-  border-color: var(--text);
+  border-color: var(--accent);
 }
-.btn-primary:hover { opacity: 0.8; }
+.btn-primary:hover { opacity: 0.85; }
 
 .btn-ghost {
   background: transparent;
@@ -214,7 +216,7 @@ a:focus-visible, button:focus-visible {
   font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--accent);
   margin-bottom: 24px;
 }
 
@@ -227,7 +229,7 @@ a:focus-visible, button:focus-visible {
   margin-bottom: 28px;
 }
 
-.accent-dot { color: var(--text); }
+.accent-dot { color: var(--accent); }
 
 .hero-sub {
   font-size: 1rem;
@@ -286,7 +288,7 @@ a:focus-visible, button:focus-visible {
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--muted);
+  color: var(--accent);
   margin: 0 0 16px;
 }
 

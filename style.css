@@ -306,20 +306,44 @@ a:focus-visible, button:focus-visible {
 /* =============================================
    PROJECTS
    ============================================= */
-.project-featured {
+.projects-grid {
   display: grid;
-  grid-template-columns: 1.1fr 1fr;
-  height: 380px;
+  grid-template-columns: repeat(3, 1fr);
   border: 1px solid var(--border);
 }
 
-.project-featured:not(:last-child) {
+.project-tile {
+  display: flex;
+  flex-direction: column;
+  padding: 32px;
+  border-right: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  transition: background var(--transition);
+  position: relative;
+}
+
+.project-tile:hover {
+  background: var(--surface);
+}
+
+/* Remove right border on every 3rd tile */
+.project-tile:nth-child(3n) {
+  border-right: none;
+}
+
+/* Remove bottom border on last row */
+.project-tile:nth-last-child(-n+3):nth-child(3n+1),
+.project-tile:nth-last-child(-n+3):nth-child(3n+1) ~ .project-tile {
   border-bottom: none;
 }
 
 .project-img-wrap {
   position: relative;
   overflow: hidden;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin-bottom: 24px;
+  background: var(--border);
 }
 
 .project-img {
@@ -331,25 +355,24 @@ a:focus-visible, button:focus-visible {
   transition: filter 0.4s ease;
 }
 
-.project-featured:hover .project-img { filter: grayscale(0%); }
+.project-tile:hover .project-img { filter: grayscale(0%); }
 
-.project-body {
-  padding: 48px;
+.project-tile-body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  border-left: 1px solid var(--border);
+  flex: 1;
 }
 
 .project-meta {
   display: flex;
   flex-wrap: wrap;
   gap: 0;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
+  align-items: center;
 }
 
 .project-tag {
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   font-weight: 500;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -361,20 +384,32 @@ a:focus-visible, button:focus-visible {
   color: var(--border);
 }
 
+.project-badge {
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  padding: 2px 7px;
+  margin-left: auto;
+}
+
 .project-title {
-  font-size: 1.4rem;
+  font-size: 1.1rem;
   color: var(--text);
-  margin: 0 0 12px;
+  margin: 0 0 10px;
 }
 
 .project-desc {
   color: var(--muted);
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   margin: 0;
   flex: 1;
+  line-height: 1.6;
 }
 
-.project-links { margin-top: 32px; }
+.project-links { margin-top: 24px; }
 
 /* =============================================
    CONTACT
@@ -469,9 +504,13 @@ footer p {
   .skills-grid { grid-template-columns: 1fr; }
   .skill-group { border-right: none; border-bottom: 1px solid var(--border); }
   .skill-group:last-child { border-bottom: none; }
-  .project-featured { grid-template-columns: 1fr; height: auto; }
-  .project-img-wrap { height: 220px; }
-  .project-body { border-left: none; border-top: 1px solid var(--border); padding: 32px; }
+  .projects-grid { grid-template-columns: repeat(2, 1fr); }
+  .project-tile:nth-child(3n) { border-right: 1px solid var(--border); }
+  .project-tile:nth-child(2n) { border-right: none; }
+  .project-tile:nth-last-child(-n+3):nth-child(3n+1),
+  .project-tile:nth-last-child(-n+3):nth-child(3n+1) ~ .project-tile { border-bottom: 1px solid var(--border); }
+  .project-tile:nth-last-child(-n+2):nth-child(2n+1),
+  .project-tile:nth-last-child(-n+2):nth-child(2n+1) ~ .project-tile { border-bottom: none; }
   .footer-inner { flex-direction: column; gap: 8px; text-align: center; }
 }
 
@@ -496,6 +535,9 @@ footer p {
   .nav-toggle { display: flex; }
   .hero-name { font-size: clamp(2.8rem, 14vw, 4.5rem); }
   .hero-cta { flex-direction: column; }
+  .projects-grid { grid-template-columns: 1fr; }
+  .project-tile { border-right: none !important; }
+  .project-tile:last-child { border-bottom: none; }
   .contact-links { flex-direction: column; align-items: center; }
 }
 

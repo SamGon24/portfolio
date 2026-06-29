@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="What Samuel Gonzalez is up to right now." />
+  <title>Now — Samuel Gonzalez</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="now.css" />
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to content</a>
+
+  <!-- HEADER / NAV -->
+  <header>
+    <div class="container header-inner">
+      <a href="index.html" class="wordmark" aria-label="Samuel Gonzalez home">SG<span class="dot">.</span></a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#projects">Projects</a></li>
+          <li><a href="index.html#research">Research</a></li>
+          <li><a href="index.html#skills">Skills</a></li>
+          <li><a href="now.html" aria-current="page" class="nav-external">Now</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <li>
+            <a href="https://github.com/SamGon24" target="_blank" rel="noopener noreferrer" class="nav-external">
+              GitHub ↗
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main-content" class="now-page">
+    <div class="container">
+
+      <!-- PAGE HEADER -->
+      <div class="now-page-header">
+        <div class="section-label">Updated regularly</div>
+        <h1 class="now-page-title">Now<span class="accent-dot">.</span></h1>
+        <p class="now-page-desc">
+          A running log of what I'm building, reading, listening to, and thinking about.
+          Written for no one in particular — mostly for myself.
+          Inspired by <a href="https://nownownow.com/about" target="_blank" rel="noopener noreferrer" class="now-inline-link">nownownow.com</a>.
+        </p>
+      </div>
+
+      <!-- ENTRIES FEED -->
+      <div class="now-feed">
+
+        <!--
+        ════════════════════════════════════════════
+        HOW TO ADD A NEW ENTRY:
+
+        1. Copy the block below (from <article> to </article>)
+        2. Paste it ABOVE the previous entry (newest first)
+        3. Update the date, id, and fill in only the sections
+           that feel relevant — leave out any that don't apply
+        4. Save the file. Done.
+        ════════════════════════════════════════════
+
+        <article class="now-entry" id="YYYY-MM">
+          <div class="now-entry-date">Month YYYY</div>
+          <div class="now-entry-body">
+
+            <div class="now-field">
+              <span class="now-field-label">Building</span>
+              <p>...</p>
+            </div>
+
+            <div class="now-field">
+              <span class="now-field-label">Reading</span>
+              <p>...</p>
+            </div>
+
+            <div class="now-field">
+              <span class="now-field-label">Listening</span>
+              <p>...</p>
+            </div>
+
+            <div class="now-field">
+              <span class="now-field-label">Watching</span>
+              <p>...</p>
+            </div>
+
+            <div class="now-field">
+              <span class="now-field-label">Thinking about</span>
+              <p>...</p>
+            </div>
+
+            <div class="now-field">
+              <span class="now-field-label">Playing</span>
+              <p>...</p>
+            </div>
+
+          </div>
+        </article>
+        -->
+
+        <!-- ═══ ENTRY: June 2026 ═══ -->
+        <article class="now-entry" id="2026-06">
+          <div class="now-entry-date">June 2026</div>
+          <div class="now-entry-body">
+
+            <div class="now-field">
+              <span class="now-field-label">Building</span>
+              <p>Deep in the STM32 RTOS scheduler. Context switching finally clicked this week — there's something satisfying about writing code that runs this close to the metal. Also keeping DARA moving; had our first real conversation with a potential user which felt significant.</p>
+            </div>
+
+            <div class="now-field">
+              <span class="now-field-label">Reading</span>
+              <p><em>Dune Messiah.</em> Paul is genuinely tragic in a way the first book doesn't prepare you for. Also deep in <em>Invincible</em> — issue 50 broke me a little. Still processing.</p>
+            </div>
+
+            <div class="now-field">
+              <span class="now-field-label">Listening</span>
+              <p>More guitar than usual lately. Found a chord progression I keep coming back to at night. The Frontman amp is getting a workout. Spotify knows the rest.</p>
+            </div>
+
+            <div class="now-field">
+              <span class="now-field-label">Thinking about</span>
+              <p>What it means to build something real while on an F-1. The constraints are genuinely hard — but they also force a kind of deliberateness that I think I'll appreciate later. Also thinking a lot about the gap between knowing how something works and being able to explain it well.</p>
+            </div>
+
+          </div>
+        </article>
+
+      </div>
+      <!-- end .now-feed -->
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <span class="footer-wordmark">SG<span class="dot">.</span></span>
+      <p>© 2026 Samuel Gonzalez Pineda. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="now.js"></script>
+</body>
+</html>

@@ -412,6 +412,127 @@ a:focus-visible, button:focus-visible {
 .project-links { margin-top: 24px; }
 
 /* =============================================
+   ZONE DIVIDERS
+   ============================================= */
+.zone-divider {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 0 40px;
+  max-width: var(--maxw);
+  margin: 0 auto;
+}
+
+.zone-divider::before,
+.zone-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+.zone-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--muted);
+  white-space: nowrap;
+}
+
+/* =============================================
+   RESEARCH
+   ============================================= */
+.research-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border: 1px solid var(--border);
+}
+
+.research-item {
+  padding: 36px 40px;
+  border-bottom: 1px solid var(--border);
+}
+.research-item:last-child { border-bottom: none; }
+
+.research-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+.research-org {
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.research-title {
+  font-size: 1.15rem;
+  color: var(--text);
+  margin: 0;
+}
+
+.research-badge {
+  font-size: 0.62rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  padding: 3px 8px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.research-desc {
+  color: var(--muted);
+  font-size: 0.9rem;
+  margin: 0 0 16px;
+  max-width: 680px;
+}
+
+.research-meta {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.research-tag {
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border: 1px solid var(--border);
+  padding: 3px 8px;
+}
+
+/* =============================================
+   PROJECT PLACEHOLDER
+   ============================================= */
+.project-img-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface);
+}
+
+.placeholder-wordmark {
+  font-family: 'Syne', sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--border);
+  letter-spacing: 0.05em;
+}
+
+/* =============================================
    CONTACT
    ============================================= */
 .section-contact { border-top: 1px solid var(--border); }
@@ -511,6 +632,7 @@ footer p {
   .project-tile:nth-last-child(-n+3):nth-child(3n+1) ~ .project-tile { border-bottom: 1px solid var(--border); }
   .project-tile:nth-last-child(-n+2):nth-child(2n+1),
   .project-tile:nth-last-child(-n+2):nth-child(2n+1) ~ .project-tile { border-bottom: none; }
+  .research-header { flex-direction: column; gap: 10px; }
   .footer-inner { flex-direction: column; gap: 8px; text-align: center; }
 }
 
@@ -538,6 +660,8 @@ footer p {
   .projects-grid { grid-template-columns: 1fr; }
   .project-tile { border-right: none !important; }
   .project-tile:last-child { border-bottom: none; }
+  .research-item { padding: 28px 24px; }
+  .zone-divider { padding: 0 24px; }
   .contact-links { flex-direction: column; align-items: center; }
 }
 

@@ -1,0 +1,142 @@
+/* =============================================
+   NOW PAGE LAYOUT
+   ============================================= */
+.now-page {
+  padding-top: 100px;
+  padding-bottom: 120px;
+}
+
+/* =============================================
+   PAGE HEADER
+   ============================================= */
+.now-page-header {
+  padding: 60px 0 80px;
+  border-bottom: 1px solid var(--border);
+  max-width: 640px;
+}
+
+.now-page-title {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(3rem, 8vw, 5.5rem);
+  font-weight: 800;
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  margin: 16px 0 24px;
+}
+
+.now-page-desc {
+  font-size: 1rem;
+  color: var(--muted);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.now-inline-link {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--transition);
+}
+.now-inline-link:hover { border-bottom-color: var(--accent); }
+
+/* =============================================
+   FEED
+   ============================================= */
+.now-feed {
+  padding-top: 0;
+}
+
+/* =============================================
+   ENTRY
+   ============================================= */
+.now-entry {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 0 60px;
+  border-bottom: 1px solid var(--border);
+  padding: 64px 0;
+}
+
+.now-entry:last-child {
+  border-bottom: none;
+}
+
+/* DATE COLUMN */
+.now-entry-date {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding-top: 4px;
+  position: sticky;
+  top: 80px;
+  align-self: start;
+}
+
+/* BODY COLUMN */
+.now-entry-body {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+/* =============================================
+   FIELDS
+   ============================================= */
+.now-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.now-field-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.now-field p {
+  font-size: 0.975rem;
+  color: var(--muted);
+  line-height: 1.75;
+  margin: 0;
+}
+
+.now-field p em {
+  color: var(--text);
+  font-style: italic;
+}
+
+.now-field p strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* =============================================
+   RESPONSIVE
+   ============================================= */
+@media (max-width: 700px) {
+  .now-entry {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 48px 0;
+  }
+
+  .now-entry-date {
+    position: static;
+    font-size: 0.7rem;
+  }
+
+  .now-page-header {
+    padding: 40px 0 56px;
+  }
+
+  .now-entry-body {
+    gap: 28px;
+  }
+}

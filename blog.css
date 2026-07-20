@@ -32,7 +32,7 @@
 }
 
 .tag-btn {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
   font-size: 0.72rem;
   font-weight: 700;
   letter-spacing: 0.1em;
@@ -80,7 +80,7 @@
   cursor: pointer;
   text-align: left;
   width: 100%;
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
   color: var(--text);
   transition: background var(--transition);
 }
@@ -117,7 +117,7 @@
 }
 
 .post-card-tag {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
   font-size: 0.62rem;
   font-weight: 600;
   letter-spacing: 0.08em;
@@ -128,7 +128,7 @@
 }
 
 .post-card-title {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
   font-size: 1.25rem;
   font-weight: 700;
   color: var(--text);
@@ -249,7 +249,7 @@
 }
 
 .modal-title {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
   font-size: clamp(1.5rem, 4vw, 2rem);
   font-weight: 700;
   line-height: 1.15;

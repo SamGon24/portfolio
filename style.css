@@ -31,7 +31,7 @@
 *, *::before, *::after { box-sizing: border-box; }
 
 body {
-  font-family: 'DM Sans', system-ui, sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
   font-size: 1rem;
   line-height: 1.65;
   margin: 0;
@@ -49,7 +49,7 @@ ul { list-style: none; padding: 0; margin: 0; }
    TYPOGRAPHY
    ============================================= */
 h1, h2, h3 {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
   font-weight: 700;
   line-height: 1.05;
   margin: 0;
@@ -127,7 +127,7 @@ header {
 }
 
 .wordmark {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
   font-size: 1.2rem;
   font-weight: 700;
   color: var(--text);
@@ -212,7 +212,7 @@ a:focus-visible, button:focus-visible {
   align-items: center;
   gap: 6px;
   padding: 10px 20px;
-  font-family: 'DM Sans', sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
   font-size: 0.875rem;
   font-weight: 500;
   text-decoration: none;
@@ -322,7 +322,7 @@ a:focus-visible, button:focus-visible {
 .skill-group:last-child { border-right: none; }
 
 .skill-group-title {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
   font-size: 0.7rem;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -561,7 +561,7 @@ a:focus-visible, button:focus-visible {
 }
 
 .placeholder-wordmark {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
   font-size: 2rem;
   font-weight: 800;
   color: var(--border);
@@ -607,7 +607,7 @@ footer {
 }
 
 .footer-wordmark {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
   font-size: 0.95rem;
   font-weight: 700;
   color: var(--muted);

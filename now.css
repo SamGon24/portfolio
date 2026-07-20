@@ -16,7 +16,7 @@
 }
 
 .now-page-title {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
   font-size: clamp(3rem, 8vw, 5.5rem);
   font-weight: 800;
   line-height: 0.95;
@@ -64,7 +64,7 @@
 
 /* DATE COLUMN */
 .now-entry-date {
-  font-family: 'Syne', sans-serif;
+  font-family: 'Inter', system-ui, sans-serif;
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.1em;

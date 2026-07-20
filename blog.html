@@ -10,11 +10,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="blog.css" />
+  <script>
+    (function () {
+      var saved = localStorage.getItem("theme");
+      var theme = saved || (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
 </head>
 <body>
 
   <a href="#main-content" class="skip-link">Skip to content</a>
-  <div class="noise" aria-hidden="true"></div>
 
   <!-- HEADER -->
   <header>
@@ -30,6 +36,10 @@
           <li><a href="https://github.com/SamGon24" target="_blank" rel="noopener noreferrer" class="nav-external">GitHub ↗</a></li>
         </ul>
       </nav>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark or light mode">
+        <span class="icon-light" aria-hidden="true">☀</span>
+        <span class="icon-dark" aria-hidden="true">☾</span>
+      </button>
       <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
         <span></span><span></span>
       </button>
@@ -41,16 +51,16 @@
     <!-- BLOG HERO -->
     <section class="blog-hero">
       <div class="container">
-        <div class="section-label reveal">Writing</div>
-        <h1 class="blog-hero-title reveal reveal-delay-1">
+        <div class="section-label">Writing</div>
+        <h1 class="blog-hero-title">
           Thoughts on code,<br />data &amp; baseball<span class="accent-dot">.</span>
         </h1>
-        <p class="blog-hero-sub reveal reveal-delay-2">
+        <p class="blog-hero-sub">
           Dev logs, CS concepts, and whatever else I'm thinking about.
         </p>
 
         <!-- Tag filter -->
-        <div class="tag-filter reveal reveal-delay-3" id="tag-filter" role="group" aria-label="Filter by topic">
+        <div class="tag-filter" id="tag-filter" role="group" aria-label="Filter by topic">
           <button class="tag-btn active" data-tag="all">All</button>
         </div>
       </div>

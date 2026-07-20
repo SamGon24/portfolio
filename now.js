@@ -1,4 +1,18 @@
 /* =============================================
+   THEME TOGGLE — dark / light mode
+   ============================================= */
+const themeToggle = document.getElementById("theme-toggle");
+
+if (themeToggle) {
+  themeToggle.addEventListener("click", () => {
+    const current = document.documentElement.getAttribute("data-theme");
+    const next = current === "light" ? "dark" : "light";
+    document.documentElement.setAttribute("data-theme", next);
+    localStorage.setItem("theme", next);
+  });
+}
+
+/* =============================================
    MOBILE NAV TOGGLE
    ============================================= */
 const navToggle = document.querySelector(".nav-toggle");
@@ -7,23 +21,12 @@ const nav = document.querySelector("nav");
 function closeNav() {
   nav.classList.remove("open");
   navToggle.setAttribute("aria-expanded", "false");
-  const spans = navToggle.querySelectorAll("span");
-  spans[0].style.transform = "";
-  spans[1].style.transform = "";
-  spans[1].style.opacity  = "";
 }
 
 if (navToggle) {
   navToggle.addEventListener("click", () => {
     const isOpen = nav.classList.toggle("open");
     navToggle.setAttribute("aria-expanded", String(isOpen));
-    const spans = navToggle.querySelectorAll("span");
-    if (isOpen) {
-      spans[0].style.transform = "translateY(7px) rotate(45deg)";
-      spans[1].style.transform = "translateY(-0px) rotate(-45deg)";
-    } else {
-      closeNav();
-    }
   });
 
   document.addEventListener("click", (e) => {
@@ -32,19 +35,6 @@ if (navToggle) {
     }
   });
 }
-
-/* =============================================
-   HEADER — shadow on scroll
-   ============================================= */
-const header = document.querySelector("header");
-
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 10) {
-    header.style.boxShadow = "0 4px 24px rgba(0,0,0,0.5)";
-  } else {
-    header.style.boxShadow = "none";
-  }
-}, { passive: true });
 
 /* =============================================
    BACK TO TOP
@@ -56,6 +46,6 @@ if (backToTop) {
   }, { passive: true });
 
   backToTop.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0 });
   });
 }

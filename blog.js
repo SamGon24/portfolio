@@ -58,12 +58,10 @@ function renderPosts(posts) {
   grid.innerHTML = "";
   empty.hidden = posts.length > 0;
 
-  posts.forEach((post, i) => {
+  posts.forEach((post) => {
     const card = document.createElement("button");
-    card.className = "post-card reveal";
+    card.className = "post-card";
     card.setAttribute("aria-label", `Read: ${post.title}`);
-    // Stagger reveal delays
-    if (i < 3) card.classList.add(`reveal-delay-${i}`);
 
     card.innerHTML = `
       <div class="post-card-left">
@@ -81,11 +79,6 @@ function renderPosts(posts) {
 
     card.addEventListener("click", () => openModal(post));
     grid.appendChild(card);
-
-    // Trigger IntersectionObserver for reveal
-    requestAnimationFrame(() => {
-      if (window._revealObserver) window._revealObserver.observe(card);
-    });
   });
 }
 
@@ -123,16 +116,6 @@ modal.querySelector(".modal-backdrop").addEventListener("click", closeModal);
 document.addEventListener("keydown", e => {
   if (e.key === "Escape" && !modal.hidden) closeModal();
 });
-
-/* ---- Expose reveal observer for dynamically added cards ---- */
-window._revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("visible");
-      window._revealObserver.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.1, rootMargin: "0px 0px -30px 0px" });
 
 /* ---- Date formatter ---- */
 function formatDate(iso) {

@@ -10,6 +10,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="now.css" />
+  <script>
+    (function () {
+      var saved = localStorage.getItem("theme");
+      var theme = saved || (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
 </head>
 <body>
 
@@ -34,6 +41,10 @@
           </li>
         </ul>
       </nav>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark or light mode">
+        <span class="icon-light" aria-hidden="true">☀</span>
+        <span class="icon-dark" aria-hidden="true">☾</span>
+      </button>
       <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
         <span></span><span></span>
       </button>

@@ -9,13 +9,17 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
+  <script>
+    (function () {
+      var saved = localStorage.getItem("theme");
+      var theme = saved || (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+      document.documentElement.setAttribute("data-theme", theme);
+    })();
+  </script>
 </head>
 <body>
 
   <a href="#main-content" class="skip-link">Skip to content</a>
-
-  <!-- Noise overlay -->
-  <div class="noise" aria-hidden="true"></div>
 
   <!-- HEADER / NAV -->
   <header>
@@ -35,6 +39,10 @@
           </li>
         </ul>
       </nav>
+      <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark or light mode">
+        <span class="icon-light" aria-hidden="true">☀</span>
+        <span class="icon-dark" aria-hidden="true">☾</span>
+      </button>
       <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
         <span></span><span></span>
       </button>
@@ -46,39 +54,33 @@
     <!-- HERO -->
     <section class="hero" aria-labelledby="hero-name">
       <div class="container hero-inner">
-        <div class="hero-label reveal">CS Student & Developer</div>
-        <h1 id="hero-name" class="hero-name reveal reveal-delay-1">
+        <div class="hero-label">CS Student & Developer</div>
+        <h1 id="hero-name" class="hero-name">
           Samuel<br />Gonzalez<span class="accent-dot">.</span>
         </h1>
-        <p class="hero-sub reveal reveal-delay-2">
+        <p class="hero-sub">
           Building with C++, Python &amp; AI — turning curiosity into code.
         </p>
-        <div class="hero-cta reveal reveal-delay-3">
+        <div class="hero-cta">
           <a href="#projects" class="btn btn-primary">View my work</a>
           <a href="https://www.linkedin.com/in/samuelgoncalves/" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">LinkedIn ↗</a>
         </div>
-      </div>
-      <div class="hero-deco" aria-hidden="true">
-        <div class="deco-ring deco-ring-1"></div>
-        <div class="deco-ring deco-ring-2"></div>
-        <div class="deco-ring deco-ring-3"></div>
       </div>
     </section>
 
     <!-- ABOUT -->
     <section id="about" class="section" aria-labelledby="about-heading">
       <div class="container about-grid">
-        <div class="about-img-wrap reveal">
+        <div class="about-img-wrap">
           <img src="IMAGES/IMG_5211.JPEG" alt="Photo of Samuel Gonzalez" class="about-photo" />
-          <div class="about-img-accent" aria-hidden="true"></div>
         </div>
-        <div class="about-text reveal reveal-delay-1">
+        <div class="about-text">
           <div class="section-label">About me</div>
           <h2 id="about-heading">I've been taking things apart since I can remember.</h2>
           <p>
-            PCs, videogame consoles, RC toys — if it had a circuit board, I wanted to know how it worked.
+            PCs, videogame consoles, RC toys, if it had a circuit board, I wanted to know how it worked.
             These days, I focus that same curiosity into software: building meaningful projects in C++, Python, and AI,
-            applying what I love most through the freedom programming gives me.
+            applying what I love most through the freedom coding and engineering gives me.
           </p>
           <p>
             Currently pursuing a <strong>Computer Science degree at Texas State University</strong>,
@@ -94,23 +96,24 @@
     <!-- SKILLS -->
     <section id="skills" class="section section-alt" aria-labelledby="skills-heading">
       <div class="container">
-        <div class="section-header reveal">
+        <div class="section-header">
           <div class="section-label">What I work with</div>
           <h2 id="skills-heading">Skills & Tools</h2>
         </div>
         <div class="skills-grid">
-          <div class="skill-group reveal">
+          <div class="skill-group">
             <h3 class="skill-group-title">Languages</h3>
             <ul class="skill-list">
               <li>C++</li>
               <li>Python</li>
+              <li>Java</li>
               <li>JavaScript</li>
-              <li>MIPS Assembly</li>
+              <li>Pytorch</li>
               <li>HTML / CSS</li>
               <li>SQL</li>
             </ul>
           </div>
-          <div class="skill-group reveal reveal-delay-1">
+          <div class="skill-group">
             <h3 class="skill-group-title">Frameworks & Libraries</h3>
             <ul class="skill-list">
               <li>React</li>
@@ -119,17 +122,19 @@
               <li>scikit-learn</li>
               <li>NumPy</li>
               <li>Matplotlib</li>
+              <li>Docker / Kubernetes</li>
             </ul>
           </div>
-          <div class="skill-group reveal reveal-delay-2">
+          <div class="skill-group">
             <h3 class="skill-group-title">Tools & Platforms</h3>
             <ul class="skill-list">
               <li>Git & GitHub</li>
               <li>VS Code</li>
-              <li>MARS (MIPS)</li>
-              <li>Google Maps API</li>
-              <li>Spotify API</li>
+              <li>Qdrant</li>
+              <li>Open AI</li>
+              <li>Docker</li>
               <li>Firebase / Firestore</li>
+              <li>Linux</li>
             </ul>
           </div>
         </div>
@@ -139,73 +144,87 @@
     <!-- PROJECTS -->
     <section id="projects" class="section" aria-labelledby="projects-heading">
       <div class="container">
-        <div class="section-header reveal">
+        <div class="section-header">
           <div class="section-label">What I've built</div>
           <h2 id="projects-heading">Projects</h2>
         </div>
 
-        <!-- ML-Ball (featured) -->
-        <div class="project project-featured reveal">
-          <div class="project-img-wrap">
-            <img src="IMAGES/MLB_PROJECT.png" alt="ML-Ball Project Screenshot" class="project-img" />
-            <div class="project-img-overlay" aria-hidden="true"></div>
-          </div>
-          <div class="project-body">
-            <div class="project-meta">
-              <span class="project-tag">Machine Learning</span>
-              <span class="project-tag">Python</span>
-              <span class="project-tag">Web App</span>
-            </div>
-            <h3 class="project-title">ML-Ball</h3>
-            <p class="project-desc">
-              Inspired by my love of the sport and <em>Moneyball</em>, I built a machine learning model
-              to predict MLB player performance for the 2024 season using historical data from
-              baseball-reference.com.
-            </p>
-            <div class="project-links">
-              <a href="https://web-production-1a459.up.railway.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
-                Live Demo ↗
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Other projects grid -->
         <div class="projects-grid">
 
-          <!-- AI Study Tool -->
-          <div class="project-card reveal reveal-delay-1">
-            <div class="project-card-icon" aria-hidden="true">🧠</div>
-            <div class="project-meta">
-              <span class="project-tag">React</span>
-              <span class="project-tag">Flask</span>
-              <span class="project-tag">AI</span>
+          <!-- ML-Ball -->
+          <div class="project-tile">
+            <div class="project-img-wrap">
+              <img src="IMAGES/MLB_PROJECT.png" alt="ML-Ball Project Screenshot" class="project-img" />
             </div>
-            <h3 class="project-title">AI Study Tool</h3>
-            <p class="project-desc">
-              Web application that transforms study notes into interactive quizzes using AI.
-              Built with React and Flask.
-            </p>
-            <a href="https://github.com/your-repo-link" target="_blank" rel="noopener noreferrer" class="card-link">
-              View Repository ↗
-            </a>
+            <div class="project-tile-body">
+              <div class="project-meta">
+                <span class="project-tag">Machine Learning</span>
+                <span class="project-tag">Python</span>
+                <span class="project-badge">Live</span>
+              </div>
+              <h3 class="project-title">ML-Ball</h3>
+              <p class="project-desc">
+                Inspired by my love of the sport and <em>Moneyball</em>, I built a machine learning model
+                to predict MLB player performance for the 2024 season using historical data from
+                baseball-reference.com.
+              </p>
+              <div class="project-links">
+                <a href="https://war-predict.onrender.com/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                  Live Demo ↗
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- AI Study Tool -->
+          <div class="project-tile">
+            <div class="project-img-wrap">
+              <img src="IMAGES/AI-SC.png" alt="AI Study Tool Screenshot" class="project-img" />
+            </div>
+            <div class="project-tile-body">
+              <div class="project-meta">
+                <span class="project-tag">React</span>
+                <span class="project-tag">Flask</span>
+                <span class="project-tag">AI</span>
+                <span class="project-badge">Live</span>
+              </div>
+              <h3 class="project-title">AI Study Tool</h3>
+              <p class="project-desc">
+                Web application that transforms study notes into interactive quizzes using AI.
+                Built with React and Flask.
+              </p>
+              <div class="project-links">
+                <!-- TODO: replace # with live demo link -->
+                <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                  Live Demo ↗
+                </a>
+              </div>
+            </div>
           </div>
 
           <!-- Spotify Stats Visualizer -->
-          <div class="project-card reveal reveal-delay-2">
-            <div class="project-card-icon" aria-hidden="true">🎵</div>
-            <div class="project-meta">
-              <span class="project-tag">Spotify API</span>
-              <span class="project-tag">JavaScript</span>
+          <div class="project-tile">
+            <div class="project-img-wrap">
+              <img src="IMAGES/SPOTIFY-SC.png" alt="Spotify Stats Visualizer Screenshot" class="project-img" />
             </div>
-            <h3 class="project-title">Spotify Stats Visualizer</h3>
-            <p class="project-desc">
-              Web app that uses the Spotify API to display personalized listening statistics
-              and visual insights.
-            </p>
-            <a href="https://github.com/your-repo-link" target="_blank" rel="noopener noreferrer" class="card-link">
-              View Repository ↗
-            </a>
+            <div class="project-tile-body">
+              <div class="project-meta">
+                <span class="project-tag">Spotify API</span>
+                <span class="project-tag">JavaScript</span>
+                <span class="project-badge">Live</span>
+              </div>
+              <h3 class="project-title">Spotify Stats Visualizer</h3>
+              <p class="project-desc">
+                Web app that uses the Spotify API to display personalized listening statistics
+                and visual insights.
+              </p>
+              <div class="project-links">
+                <!-- TODO: replace # with live demo link -->
+                <a href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                  Live Demo ↗
+                </a>
+              </div>
+            </div>
           </div>
 
         </div>
@@ -214,7 +233,7 @@
 
     <!-- CONTACT -->
     <section id="contact" class="section section-contact" aria-labelledby="contact-heading">
-      <div class="container contact-inner reveal">
+      <div class="container contact-inner">
         <div class="section-label">Get in touch</div>
         <h2 id="contact-heading">Let's work together.</h2>
         <p>
@@ -222,7 +241,7 @@
           my inbox is open.
         </p>
         <div class="contact-links">
-          <a href="mailto:samuel@example.com" class="btn btn-primary">Send an email</a>
+          <a href="mailto:samuelitro24@gmail.com" class="btn btn-primary">Send an email</a>
           <a href="https://www.linkedin.com/in/samuelgoncalves/" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">LinkedIn ↗</a>
           <a href="https://github.com/SamGon24" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">GitHub ↗</a>
         </div>

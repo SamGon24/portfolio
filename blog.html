@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Samuel Gonzalez — writing about dev, baseball analytics, and CS." />
+  <title>Blog — Samuel Gonzalez</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="blog.css" />
+</head>
+<body>
+
+  <a href="#main-content" class="skip-link">Skip to content</a>
+  <div class="noise" aria-hidden="true"></div>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container header-inner">
+      <a href="index.html" class="wordmark" aria-label="Samuel Gonzalez home">SG<span class="dot">.</span></a>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#skills">Skills</a></li>
+          <li><a href="index.html#projects">Projects</a></li>
+          <li><a href="blog.html" class="nav-active">Blog</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+          <li><a href="https://github.com/SamGon24" target="_blank" rel="noopener noreferrer" class="nav-external">GitHub ↗</a></li>
+        </ul>
+      </nav>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- BLOG HERO -->
+    <section class="blog-hero">
+      <div class="container">
+        <div class="section-label reveal">Writing</div>
+        <h1 class="blog-hero-title reveal reveal-delay-1">
+          Thoughts on code,<br />data &amp; baseball<span class="accent-dot">.</span>
+        </h1>
+        <p class="blog-hero-sub reveal reveal-delay-2">
+          Dev logs, CS concepts, and whatever else I'm thinking about.
+        </p>
+
+        <!-- Tag filter -->
+        <div class="tag-filter reveal reveal-delay-3" id="tag-filter" role="group" aria-label="Filter by topic">
+          <button class="tag-btn active" data-tag="all">All</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- POST LIST -->
+    <section class="blog-list-section">
+      <div class="container">
+        <div id="posts-grid" class="posts-grid">
+          <!-- injected by JS -->
+        </div>
+        <div id="posts-empty" class="posts-empty" hidden>
+          <span>No posts in this category yet.</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- POST MODAL (reading view) -->
+  <div id="post-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden>
+    <div class="modal-backdrop"></div>
+    <div class="modal-panel">
+      <button class="modal-close" aria-label="Close post">✕</button>
+      <div class="modal-meta">
+        <span id="modal-date" class="modal-date"></span>
+        <div id="modal-tags" class="modal-tags"></div>
+      </div>
+      <h2 id="modal-title" class="modal-title"></h2>
+      <div id="modal-body" class="modal-body"></div>
+    </div>
+  </div>
+
+  <button id="back-to-top" aria-label="Back to top">↑</button>
+
+  <script src="script.js"></script>
+  <script src="blog.js"></script>
+</body>
+</html>

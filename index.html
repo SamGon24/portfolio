@@ -14,6 +14,9 @@
 
   <a href="#main-content" class="skip-link">Skip to content</a>
 
+  <!-- Noise overlay -->
+  <div class="noise" aria-hidden="true"></div>
+
   <!-- HEADER / NAV -->
   <header>
     <div class="container header-inner">
@@ -21,10 +24,9 @@
       <nav>
         <ul class="nav-links">
           <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#research">Research</a></li>
           <li><a href="#skills">Skills</a></li>
-          <li><a href="now.html" target="_blank" rel="noopener noreferrer" class="nav-external">Now ↗</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="blog.html">Blog</a></li>
           <li><a href="#contact">Contact</a></li>
           <li>
             <a href="https://github.com/SamGon24" target="_blank" rel="noopener noreferrer" class="nav-external">
@@ -46,43 +48,41 @@
       <div class="container hero-inner">
         <div class="hero-label reveal">CS Student & Developer</div>
         <h1 id="hero-name" class="hero-name reveal reveal-delay-1">
-          Samuel<br />Gonzalez Pineda<span class="accent-dot">.</span>
+          Samuel<br />Gonzalez<span class="accent-dot">.</span>
         </h1>
         <p class="hero-sub reveal reveal-delay-2">
-          CS undergrad at Texas State — building ML tools, AI apps, and embedded systems.
-          Undergraduate researcher &amp; Spring 2026 Excellence Award recipient.
+          Building with C++, Python &amp; AI — turning curiosity into code.
         </p>
         <div class="hero-cta reveal reveal-delay-3">
           <a href="#projects" class="btn btn-primary">View my work</a>
           <a href="https://www.linkedin.com/in/samuelgoncalves/" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">LinkedIn ↗</a>
-          <a href="YOUR_RESUME_LINK_HERE" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">Resume ↗</a>
         </div>
       </div>
+      <div class="hero-deco" aria-hidden="true">
+        <div class="deco-ring deco-ring-1"></div>
+        <div class="deco-ring deco-ring-2"></div>
+        <div class="deco-ring deco-ring-3"></div>
+      </div>
     </section>
-
-    <!-- ── WORK ZONE ──────────────────────────────── -->
-    <div class="zone-divider reveal">
-      <span class="zone-label">Work</span>
-    </div>
 
     <!-- ABOUT -->
     <section id="about" class="section" aria-labelledby="about-heading">
       <div class="container about-grid">
         <div class="about-img-wrap reveal">
           <img src="IMAGES/IMG_5211.JPEG" alt="Photo of Samuel Gonzalez" class="about-photo" />
+          <div class="about-img-accent" aria-hidden="true"></div>
         </div>
         <div class="about-text reveal reveal-delay-1">
           <div class="section-label">About me</div>
           <h2 id="about-heading">I've been taking things apart since I can remember.</h2>
           <p>
             PCs, videogame consoles, RC toys — if it had a circuit board, I wanted to know how it worked.
-            Born in Mexico, based in Texas, I focus that same curiosity into software: building meaningful
-            projects in C++, Python, and AI through the freedom programming gives me.
+            These days, I focus that same curiosity into software: building meaningful projects in C++, Python, and AI,
+            applying what I love most through the freedom programming gives me.
           </p>
           <p>
-            Pursuing a <strong>CS degree at Texas State University</strong> (graduating Fall 2027),
-            working as an undergraduate researcher in Dr. Qasem's lab, and co-founding
-            <strong>DARA</strong> alongside a fellow Bobcat.
+            Currently pursuing a <strong>Computer Science degree at Texas State University</strong>,
+            honing my skills in software engineering and data analysis.
           </p>
           <a href="https://github.com/SamGon24" target="_blank" rel="noopener noreferrer" class="btn btn-outline">
             See my GitHub ↗
@@ -90,151 +90,6 @@
         </div>
       </div>
     </section>
-
-    <!-- PROJECTS -->
-    <section id="projects" class="section section-alt" aria-labelledby="projects-heading">
-      <div class="container">
-        <div class="section-header reveal">
-          <div class="section-label">What I've built</div>
-          <h2 id="projects-heading">Projects</h2>
-        </div>
-
-        <div class="projects-grid">
-
-          <!-- ML-Ball -->
-          <div class="project-tile reveal">
-            <div class="project-img-wrap">
-              <img src="IMAGES/MLB_PROJECT.png" alt="ML-Ball Project Screenshot" class="project-img" />
-            </div>
-            <div class="project-tile-body">
-              <div class="project-meta">
-                <span class="project-tag">Machine Learning</span>
-                <span class="project-tag">Random Forest</span>
-                <span class="project-tag">Python</span>
-                <span class="project-tag">scikit-learn</span>
-              </div>
-              <h3 class="project-title">ML-Ball</h3>
-              <p class="project-desc">
-                Inspired by my love of the sport and <em>Moneyball</em>, I built a machine learning model
-                to predict MLB player performance using historical data from baseball-reference.com.
-              </p>
-              <div class="project-links">
-                <a href="https://web-production-1a459.up.railway.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Live Demo ↗</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Spotify Visualizer -->
-          <div class="project-tile reveal reveal-delay-1">
-            <div class="project-img-wrap">
-              <img src="IMAGES/SPOTIFY-SC.png" alt="Spotify Visualizer Screenshot" class="project-img" />
-            </div>
-            <div class="project-tile-body">
-              <div class="project-meta">
-                <span class="project-tag">Spotify API</span>
-                <span class="project-tag">React</span>
-                <span class="project-tag">Flask</span>
-                <span class="project-tag">Python</span>
-              </div>
-              <h3 class="project-title">Spotify Visualizer</h3>
-              <p class="project-desc">
-                Web app that connects to your Spotify account and surfaces personalized listening
-                statistics and visual insights through a clean React interface.
-              </p>
-              <div class="project-links">
-                <a href="https://spotify-visualizer-ugbj.vercel.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Live Demo ↗</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- Study AI-Tool -->
-          <div class="project-tile reveal reveal-delay-2">
-            <div class="project-img-wrap">
-              <img src="IMAGES/AI-SC.png" alt="Study AI-Tool Screenshot" class="project-img" />
-            </div>
-            <div class="project-tile-body">
-              <div class="project-meta">
-                <span class="project-tag">OpenAI API</span>
-                <span class="project-tag">RAG</span>
-                <span class="project-tag">React</span>
-                <span class="project-tag">Firebase</span>
-              </div>
-              <h3 class="project-title">Study AI-Tool</h3>
-              <p class="project-desc">
-                AI-powered study tool using GPT-4o, RAG with Qdrant, and React — built for CS 3398,
-                now live with Firebase auth and a document library.
-              </p>
-              <div class="project-links">
-                <a href="https://aitutorproject-197c3.web.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Live Demo ↗</a>
-              </div>
-            </div>
-          </div>
-
-          <!-- DARA -->
-          <div class="project-tile reveal">
-            <div class="project-img-wrap project-img-placeholder">
-              <span class="placeholder-wordmark">DARA</span>
-            </div>
-            <div class="project-tile-body">
-              <div class="project-meta">
-                <span class="project-tag">Startup</span>
-                <span class="project-tag">Co-founder</span>
-                <span class="project-badge">In progress</span>
-              </div>
-              <h3 class="project-title">DARA</h3>
-              <p class="project-desc">
-                Co-founded startup building at the intersection of technology and community.
-                Navigating F-1 entrepreneurship through CPT/OPT pathways alongside a TXST colleague.
-              </p>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="reveal" style="margin-top: 40px; text-align: center;">
-          <a href="https://github.com/SamGon24" target="_blank" rel="noopener noreferrer" class="btn btn-outline">More on GitHub ↗</a>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- RESEARCH -->
-    <section id="research" class="section" aria-labelledby="research-heading">
-      <div class="container">
-        <div class="section-header reveal">
-          <div class="section-label">Academic work</div>
-          <h2 id="research-heading">Research</h2>
-        </div>
-        <div class="research-grid">
-
-          <div class="research-item reveal">
-            <div class="research-header">
-              <div>
-                <div class="research-org">Texas State University — Dr. Apan Qasem's Lab</div>
-                <h3 class="research-title">NUEVA Community App</h3>
-              </div>
-              <span class="research-badge">ACL-funded</span>
-            </div>
-            <p class="research-desc">
-              Undergraduate researcher on a community-facing mobile application funded by the
-              Administration for Community Living. Working on architecture, feature development,
-              and data integration in an applied research context.
-            </p>
-            <div class="research-meta">
-              <span class="research-tag">Mobile</span>
-              <span class="research-tag">Community Tech</span>
-              <span class="research-tag">Applied Research</span>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ── PERSON ZONE ─────────────────────────────── -->
-    <div class="zone-divider reveal">
-      <span class="zone-label">Person</span>
-    </div>
 
     <!-- SKILLS -->
     <section id="skills" class="section section-alt" aria-labelledby="skills-heading">
@@ -271,12 +126,88 @@
             <ul class="skill-list">
               <li>Git & GitHub</li>
               <li>VS Code</li>
+              <li>MARS (MIPS)</li>
               <li>Google Maps API</li>
               <li>Spotify API</li>
               <li>Firebase / Firestore</li>
-              <li>Qdrant</li>
             </ul>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section" aria-labelledby="projects-heading">
+      <div class="container">
+        <div class="section-header reveal">
+          <div class="section-label">What I've built</div>
+          <h2 id="projects-heading">Projects</h2>
+        </div>
+
+        <!-- ML-Ball (featured) -->
+        <div class="project project-featured reveal">
+          <div class="project-img-wrap">
+            <img src="IMAGES/MLB_PROJECT.png" alt="ML-Ball Project Screenshot" class="project-img" />
+            <div class="project-img-overlay" aria-hidden="true"></div>
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="project-tag">Machine Learning</span>
+              <span class="project-tag">Python</span>
+              <span class="project-tag">Web App</span>
+            </div>
+            <h3 class="project-title">ML-Ball</h3>
+            <p class="project-desc">
+              Inspired by my love of the sport and <em>Moneyball</em>, I built a machine learning model
+              to predict MLB player performance for the 2024 season using historical data from
+              baseball-reference.com.
+            </p>
+            <div class="project-links">
+              <a href="https://web-production-1a459.up.railway.app/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">
+                Live Demo ↗
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Other projects grid -->
+        <div class="projects-grid">
+
+          <!-- AI Study Tool -->
+          <div class="project-card reveal reveal-delay-1">
+            <div class="project-card-icon" aria-hidden="true">🧠</div>
+            <div class="project-meta">
+              <span class="project-tag">React</span>
+              <span class="project-tag">Flask</span>
+              <span class="project-tag">AI</span>
+            </div>
+            <h3 class="project-title">AI Study Tool</h3>
+            <p class="project-desc">
+              Web application that transforms study notes into interactive quizzes using AI.
+              Built with React and Flask.
+            </p>
+            <a href="https://github.com/your-repo-link" target="_blank" rel="noopener noreferrer" class="card-link">
+              View Repository ↗
+            </a>
+          </div>
+
+          <!-- Spotify Stats Visualizer -->
+          <div class="project-card reveal reveal-delay-2">
+            <div class="project-card-icon" aria-hidden="true">🎵</div>
+            <div class="project-meta">
+              <span class="project-tag">Spotify API</span>
+              <span class="project-tag">JavaScript</span>
+            </div>
+            <h3 class="project-title">Spotify Stats Visualizer</h3>
+            <p class="project-desc">
+              Web app that uses the Spotify API to display personalized listening statistics
+              and visual insights.
+            </p>
+            <a href="https://github.com/your-repo-link" target="_blank" rel="noopener noreferrer" class="card-link">
+              View Repository ↗
+            </a>
+          </div>
+
         </div>
       </div>
     </section>
@@ -291,7 +222,7 @@
           my inbox is open.
         </p>
         <div class="contact-links">
-          <a href="mailto:samuelitro24@gmail.com" class="btn btn-primary">Send an email</a>
+          <a href="mailto:samuel@example.com" class="btn btn-primary">Send an email</a>
           <a href="https://www.linkedin.com/in/samuelgoncalves/" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">LinkedIn ↗</a>
           <a href="https://github.com/SamGon24" target="_blank" rel="noopener noreferrer" class="btn btn-ghost">GitHub ↗</a>
         </div>
